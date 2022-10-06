@@ -42,4 +42,4 @@ jobs:
           password: ${{secrets.SERVICE_PASSWORD}}
           script:
             cd deploy
-            docker-compose  up -d
+            docker-compose up -d
