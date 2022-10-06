@@ -37,9 +37,9 @@ jobs:
       - name: app
         uses: appleboy/ssh-action@master
         with:
-          host: ${{secrets.SERVICE_HOST}}
+          host: ${{ secrets.SERVICE_HOST }}
           username: ${{ secrets.SERVICE_USERNAME }}
           password: ${{ secrets.SERVICE_PASSWORD }}
           script: |
             cd deploy
-            echo ${{ secrets.SERVICE_PASSWORD }} | sudo -S docker-compose up -d
+            docker-compose up -d
