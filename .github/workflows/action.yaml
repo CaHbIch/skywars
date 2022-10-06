@@ -43,5 +43,5 @@ jobs:
           password: ${{ secrets.SERVICE_PASSWORD }}
           script: |
             cd deploy
-            echo ${{ secrets.SERVICE_PASSWORD }} | sudo -S docker-compose pull
+            echo ${{ secrets.SERVICE_PASSWORD }} | sudo -S docker-compose up -d
 
