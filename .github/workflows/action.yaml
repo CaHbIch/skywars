@@ -40,6 +40,6 @@ jobs:
           host: ${{secrets.SERVICE_HOST}}
           username: ${{secrets.SERVICE_USERNAME}}
           password: ${{secrets.SERVICE_PASSWORD}}
-          script:
+          script: |
             cd deploy
             docker-compose up -d
